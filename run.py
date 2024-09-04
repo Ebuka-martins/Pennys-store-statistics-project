@@ -17,14 +17,21 @@ def get_sales_data():
     """
     Predict sales figures input from the users to get the perfect sales for the next year each
     """
-    print("please enter the sales data to predict the next year sales")
-    print("Data should be six numbers, seperated by commas.")
-    print("Example: 24,34,40,52,63,71")
+    while True:
+        print("please enter the sales data to predict the next year sales")
+        print("Data should be six numbers, seperated by commas.")
+        print("Example: 24,34,40,52,63,71\n")
 
-    data_str = input("Enter your data here: ")
+        data_str = input("Enter your data here: ")
 
-    sales_data = data_str.split(",")
-    validate_data(sales_data)
+        sales_data = data_str.split(",")
+        
+        if validate_data(sales_data):
+            print("Data is valid!")
+            break
+
+    return sales_data      
+
 
 def validate_data(values):
     """
@@ -40,8 +47,10 @@ def validate_data(values):
                 f"Exactly 6 values required to predict the next year sales, you provided {len(values)}"
             )
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")        
+        print(f"Invalid data: {e}, please try again.\n")
+        return False    
+
+    return True        
             
-     
-   
-get_sales_data()    
+
+data = get_sales_data()   
