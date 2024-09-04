@@ -16,6 +16,7 @@ SHEET = GSPREAD_CLIENT.open('pennys_store_statistics')
 def get_sales_data():
     """
     Predict sales figures input from the users to get the perfect sales for the next year each
+    Adding a while loop to collect data from the users and predict the future sales for next year
     """
     while True:
         print("please enter the sales data to predict the next year sales")
@@ -50,7 +51,18 @@ def validate_data(values):
         print(f"Invalid data: {e}, please try again.\n")
         return False    
 
-    return True        
+    return True      
+
+def predict_sales_worksheet(data):
+    """
+    predict sales worksheet for next year, add new row with the list data provided  
+    """      
+    print("predict sales worksheet...\n")
+    sales_worksheet = SHEET.worksheet("sales")
+    sales_worksheet.append_row(data)
+    print("sales_worksheet predicted successfull.\n")
             
 
 data = get_sales_data()   
+sales_data = [int(num) for num in data]
+predict_sales_worksheet(sales_data)
