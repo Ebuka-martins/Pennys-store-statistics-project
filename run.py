@@ -88,8 +88,9 @@ def predict_sales_worksheet(data):
     
     
     next_year = last_year + 1
-    
-    
+
+    predicted_sales = generate_random_sales(data)
+
     new_row = [next_year] + data
     
     
