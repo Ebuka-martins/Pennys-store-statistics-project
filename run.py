@@ -1,45 +1,44 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
+# Google Sheets API Setup
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
-    ]
+]
 
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('pennys_store_statistics')
-   
 
 def get_sales_data():
     """
     Predict sales figures input from the users to get the perfect sales for the next year each
-    Adding a while loop to collect data from the users and predict the future sales for next year
+    Adding a while loop to collect data from the users and predict the future sales for next year.
     """
     while True:
-        print("please enter the sales data to predict the next year sales")
-        print("Data should be six numbers, seperated by commas.")
+        print("Please enter the sales data to predict the next year sales.")
+        print("Data should be six numbers, separated by commas.")
         print("Example: 24,34,40,52,63,71\n")
 
         data_str = input("Enter your data here: ")
 
         sales_data = data_str.split(",")
-        
+
         if validate_data(sales_data):
             print("Data is valid!")
             break
 
-    return sales_data      
+    return sales_data
 
 
 def validate_data(values):
     """
-    In the try syntax convert strings into intergers.
-    Raises ValueError if strings cannot be converted into int.
+    In the try block, convert strings into integers.
+    Raises ValueError if strings cannot be converted into int,
     or if they are not exactly 6 values.
-
     """
     try:
         [int(value) for value in values]
@@ -49,20 +48,42 @@ def validate_data(values):
             )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
-        return False    
+        return False
 
-    return True      
+    return True
+
 
 def predict_sales_worksheet(data):
     """
-    predict sales worksheet for next year, add new row with the list data provided  
-    """      
-    print("predict sales worksheet...\n")
+    Predict sales worksheet for next year, add new row with the list data provided.
+    """
+    print("Predicting sales for the next year...\n")
+    
+    # Access the sales worksheet
     sales_worksheet = SHEET.worksheet("sales")
-    sales_worksheet.append_row(data)
-    print("sales_worksheet predicted successfull.\n")
-            
+    
+    # Get all existing data to determine the last year
+    current_data = sales_worksheet.get_all_values()
+    
+    # Find the last year from the worksheet
+    last_row = current_data[-1]  # Last row in the sheet
+    last_year = int(last_row[0])  # Get the year (first column)
+    
+    # Increment year for prediction
+    next_year = last_year + 1
+    
+    # Combine the year and the sales data
+    new_row = [next_year] + data
+    
+    # Append the new row to the worksheet
+    sales_worksheet.append_row(new_row)
+    
+    print(f"Predicted sales for year {next_year}: {new_row}")
+    print("Sales worksheet updated successfully.\n")
 
-data = get_sales_data()   
-sales_data = [int(num) for num in data]
-predict_sales_worksheet(sales_data)
+
+# Main Program Execution
+if __name__ == "__main__":
+    data = get_sales_data()   
+    sales_data = [int(num) for num in data]  # Convert input data to integers
+    predict_sales_worksheet(sales_data)
