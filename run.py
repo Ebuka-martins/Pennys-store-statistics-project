@@ -1,7 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
-# Google Sheets API Setup
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -59,31 +59,31 @@ def predict_sales_worksheet(data):
     """
     print("Predicting sales for the next year...\n")
     
-    # Access the sales worksheet
+    
     sales_worksheet = SHEET.worksheet("sales")
     
     # Get all existing data to determine the last year
     current_data = sales_worksheet.get_all_values()
     
     # Find the last year from the worksheet
-    last_row = current_data[-1]  # Last row in the sheet
-    last_year = int(last_row[0])  # Get the year (first column)
+    last_row = current_data[-1]  
+    last_year = int(last_row[0])  
     
-    # Increment year for prediction
+    
     next_year = last_year + 1
     
-    # Combine the year and the sales data
+    
     new_row = [next_year] + data
     
-    # Append the new row to the worksheet
+    
     sales_worksheet.append_row(new_row)
     
     print(f"Predicted sales for year {next_year}: {new_row}")
     print("Sales worksheet updated successfully.\n")
 
 
-# Main Program Execution
+
 if __name__ == "__main__":
     data = get_sales_data()   
-    sales_data = [int(num) for num in data]  # Convert input data to integers
+    sales_data = [int(num) for num in data]  
     predict_sales_worksheet(sales_data)
