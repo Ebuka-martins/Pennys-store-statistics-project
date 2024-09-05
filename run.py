@@ -16,8 +16,7 @@ SHEET = GSPREAD_CLIENT.open('pennys_store_statistics')
 
 def get_sales_data():
     """
-    Predict sales figures input from the users to get the perfect sales for the next year each
-    Adding a while loop to collect data from the users and predict the future sales for next year.
+    Collect sales data input from the user to get the base sales for the next year prediction.
     """
     while True:
         print("Please enter the sales data to predict the next year sales.")
@@ -37,9 +36,7 @@ def get_sales_data():
 
 def validate_data(values):
     """
-    In the try block, convert strings into integers.
-    Raises ValueError if strings cannot be converted into int,
-    or if they are not exactly 6 values.
+    Validates that exactly 6 numeric values are entered by the user.
     """
     try:
         [int(value) for value in values]
@@ -56,52 +53,56 @@ def validate_data(values):
 
 def generate_random_sales(sales_data):
     """
-    Generate random sales predictions by adding a small varience to the provided sales data.
+    Generates random sales predictions by adding a small variance to the provided sales data.
     The variance is between -10% and +10% for each sales number.
-    """    
+    """
     predicted_sales = []
     for sale in sales_data:
         sale = int(sale)
-        variance = random.uniform(-0.10, 0.10)
+        variance = random.uniform(-0.10, 0.10)  
         new_value = int(sale + sale * variance)
         predicted_sales.append(new_value)
+    
+    return predicted_sales
 
-    return predicted_sales    
 
-
-
-def predict_sales_worksheet(data):
+def predict_sales_for_year(year, data):
     """
-    Predict sales worksheet for next year, add new row with the list data provided.
+    Predict the sales for the specific year, adding a new row with the year and predicted sales data.
     """
-    print("Predicting sales for the next year...\n")
+    print(f"Predicting sales for year {year}...\n")
     
     
     sales_worksheet = SHEET.worksheet("sales")
     
-    # Get all existing data to determine the last year
-    current_data = sales_worksheet.get_all_values()
-    
-    # Find the last year from the worksheet
-    last_row = current_data[-1]  
-    last_year = int(last_row[0])  
-    
-    
-    next_year = last_year + 1
-
+    # Generate predicted sales data
     predicted_sales = generate_random_sales(data)
-
-    new_row = [next_year] + data
     
+    # Combine the year with the predicted sales data
+    new_row = [year] + predicted_sales
     
+    # Append the new row to the worksheet
     sales_worksheet.append_row(new_row)
     
-    print(f"Predicted sales for year {next_year}: {new_row}")
+    print(f"Predicted sales for year {year}: {new_row}")
     print("Sales worksheet updated successfully.\n")
 
 
 
 if __name__ == "__main__":
-    data = get_sales_data()   
-    sales_data = [int(num) for num in data]  
-    predict_sales_worksheet(sales_data)
+    # Initialize the starting year
+    year = 2020
+    
+    while True:
+        data = get_sales_data()
+        sales_data = [int(num) for num in data]  
+        predict_sales_for_year(year, sales_data)
+        
+        # Increment the year for the next prediction
+        year += 1
+        
+        # Ask if the user wants to continue
+        cont = input("Do you want to predict sales for the next year? (yes/no): ")
+        if cont.lower() != 'yes':
+            print("Exiting program.")
+            break
