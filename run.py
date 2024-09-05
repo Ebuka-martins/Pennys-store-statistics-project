@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import random
 
 
 SCOPE = [
@@ -51,6 +52,22 @@ def validate_data(values):
         return False
 
     return True
+
+
+def generate_random_sales(sales_data):
+    """
+    Generate random sales predictions by adding a small varience to the provided sales data.
+    The variance is between -10% and +10% for each sales number.
+    """    
+    predicted_sales = []
+    for sale in sales_data:
+        sale = int(sale)
+        variance = random.uniform(-0.10, 0.10)
+        new_value = int(sale + sale * variance)
+        predicted_sales.append(new_value)
+
+    return predicted_sales    
+
 
 
 def predict_sales_worksheet(data):
