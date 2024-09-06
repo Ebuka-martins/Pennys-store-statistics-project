@@ -19,7 +19,7 @@ def get_sales_data():
     Collect sales data input from the user to get the base sales for the next year prediction.
     """
     while True:
-        print("Welcome to Penny's Sales Data Prediction Programming")
+        print("Welcome to Penny's Sales Data Prediction Analyse")
         print("Please enter the sales data to predict the next year sales.")
         print("Data should be six numbers, separated by commas.")
         print("Example: 24,34,40,52,63,71\n")
@@ -43,8 +43,8 @@ def validate_data(values):
         [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
-               "Exactly 6 values required to predict the next year sales, "
-                f"you provided {len(values)}")
+                f"Exactly 6 values required to predict the next year sales, you provided {len(values)}"
+            )
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
         return False
@@ -69,8 +69,7 @@ def generate_random_sales(sales_data):
 
 def predict_sales_for_year(year, data):
     """
-    Predict the sales for the specific year, adding a new row with the year
-    and predicted sales data.   
+    Predict the sales for the specific year, adding a new row with the year and predicted sales data.
     """
     print(f"Predicting sales for year {year}...\n")
     
@@ -107,4 +106,4 @@ if __name__ == "__main__":
         cont = input("Do you want to predict sales for the next year? (yes/no): ")
         if cont.lower() != 'yes':
             print("Exiting program.")
-        break
+            break
