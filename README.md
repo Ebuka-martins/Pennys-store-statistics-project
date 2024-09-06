@@ -12,4 +12,4 @@ This Python program automates the process of predicting and managing yearly sale
 2. Automatically, the google sales worksheet for next year will be updated effectively statrting from the year 2020.
 3. The program will ask you if you want to predict the sales for next year.
 4. Press YES to continue with the sales prediction for next year.
-5. press No to Exit.
+5. press No to Exit the program.
