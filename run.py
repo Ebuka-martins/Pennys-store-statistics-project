@@ -19,6 +19,7 @@ def get_sales_data():
     Collect sales data input from the user to get the base sales for the next year prediction.
     """
     while True:
+        print("Welcome to Penny's Sales Data Prediction Analyse")
         print("Please enter the sales data to predict the next year sales.")
         print("Data should be six numbers, separated by commas.")
         print("Example: 24,34,40,52,63,71\n")
