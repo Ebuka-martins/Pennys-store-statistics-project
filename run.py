@@ -107,4 +107,4 @@ if __name__ == "__main__":
         cont = input("Do you want to predict sales for the next year? (yes/no): ")
         if cont.lower() != 'yes':
             print("Exiting program.")
-            break
+        break
