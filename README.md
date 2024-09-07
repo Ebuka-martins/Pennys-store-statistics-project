@@ -13,3 +13,6 @@ This Python program automates the process of predicting and managing yearly sale
 3. The program will ask you if you want to predict the sales for next year.
 4. Press YES to continue with the sales prediction for next year.
 5. press No to Exit the program.
+
+
+## Users experience

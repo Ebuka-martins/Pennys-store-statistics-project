@@ -1,6 +1,9 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
+from colorama import Fore, init
+
+init(autoreset=True)
 
 
 SCOPE = [
@@ -85,8 +88,8 @@ def predict_sales_for_year(year, data):
     # Append the new row to the worksheet
     sales_worksheet.append_row(new_row)
     
-    print(f"Predicted sales for year {year}: {new_row}")
-    print("Sales worksheet updated successfully.\n")
+    print(Fore.YELLOW + f"Predicted sales for year {year}: {new_row}")
+    print(Fore.YELLOW + "Sales worksheet updated successfully.\n")
 
 
 
