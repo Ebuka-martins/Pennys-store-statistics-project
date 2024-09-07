@@ -16,3 +16,11 @@ This Python program automates the process of predicting and managing yearly sale
 
 
 ## Users experience
+
+#### To provide the perfect user experience and features for Penny's store statistics app, we need to focus on key elements like simplicity, user guidance, predictive insights, and visualization. Here's an enhanced version of your current app's user experience (UX) and feature set:
+- As a user, a welcoming Introduction: When the app starts, give the user a clear overview of what they can do with the app (e.g., predict sales, view past statistics).
+- Data Input Help: If the user enters incorrect data, provide specific, helpful error messages. Use color highlights to distinguish between errors and successful inputs (e.g., invalid input in red, successful in green).
+- Error Handling for Incorrect Inputs: After a failed validation, guide the user on how to correct the input.
+- Immediate Validation: After input, validate the data immediately and highlight success in green, errors in red.
+- an error occures if not enough values or if non-numeric values are provided.
+- How to exit the program once the valid details has been entered.
