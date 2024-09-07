@@ -49,7 +49,7 @@ def validate_data(values):
                 f"Exactly 6 values required to predict the next year sales, you provided {len(values)}"
             )
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+        print(Fore.RED + f"Invalid data: {e}, please try again.\n")
         return False
 
     return True
@@ -106,7 +106,7 @@ if __name__ == "__main__":
         year += 1
         
         # Ask if the user wants to continue
-        cont = input("Do you want to predict sales for the next year? (yes/no): ")
+        cont = input(Fore.GREEN + "Do you want to predict sales for the next year? (yes/no): ")
         if cont.lower() != 'yes':
-            print("Exiting program.")
+            print(Fore.RED + "Exiting program.")
             break
