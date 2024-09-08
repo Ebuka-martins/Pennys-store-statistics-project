@@ -24,3 +24,16 @@ This Python program automates the process of predicting and managing yearly sale
 - Immediate Validation: After input, validate the data immediately and highlight success in green, errors in red.
 - an error occures if not enough values or if non-numeric values are provided.
 - How to exit the program once the valid details has been entered.
+
+
+## Features
+
+- **When the program is loaded**
+
+- The user will be ushered in with a welcoming message.
+- A statement which says you should enter the sales data to precict the next year sales is also displayed.
+- An example of the kind and amount of data you should input is displayed 
+- if the right combination is inputed a predictive data is generated for 2020, using random variance.
+- The data is automatically updated on the google sheet
+- The program will ask the users if they still want to predict sales for next year.
+- if the user says YES, it automatically predict the next year input and if the user input a NO statement, it exit the program.
