@@ -98,4 +98,35 @@ The user is expected to input the correct six digit numbers, seperated with comm
 - [heroku.com](https://www.heroku.com/) was used for the deployment of project.
 - [am i responsive](https://ui.dev/amiresponsive) was used to screenshot devices for responsive design for README purpose.
 
+## Bugs
+### Solved bugs
+1. The color font text used to color print output was solved by applying `Fore and import colorama`
+```
+ 
+    print(Fore.YELLOW + f"Predicted sales for year {year}: {new_row}")
+    print(Fore.YELLOW + "Sales worksheet updated successfully.\n")
 
+     cont = input(Fore.GREEN + "Do you want to predict sales for the next year? (yes/no): ")
+        if cont.lower() != 'yes':
+            print(Fore.RED + "Exiting program.")
+            break
+```
+2. The method ```  print(Fore.RED + "Exiting program.")
+            break``` was not properly exiting from the program when run on pthon terminal.
+
+      ```  print(Fore.RED + "Exiting program.")
+            break
+      ```
+     break function was applied in other to exit from the program.             
+
+### Unsolved Bugs
+
+  - None.
+
+ ## Testing
+
+### Validator
+
+- **run.py**
+ - No errors were found when passed through the official [Pep8 Python Validator](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
+ 
