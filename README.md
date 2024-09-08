@@ -28,7 +28,7 @@ This Python program automates the process of predicting and managing yearly sale
 
 ## Features
 
-- **When the program is loaded**
+ **When the program is loaded**
 
 - The user will be ushered in with a welcoming message.
 - A statement which says you should enter the sales data to precict the next year sales is also displayed.
@@ -37,3 +37,20 @@ This Python program automates the process of predicting and managing yearly sale
 - The data is automatically updated on the google sheet
 - The program will ask the users if they still want to predict sales for next year.
 - if the user says YES, it automatically predict the next year input and if the user input a NO statement, it exit the program.
+
+![welcome-message](Documentation/welcome-message.png)
+
+The user is expected to input the correct six digit numbers, seperated with commas in ther to predict the sales for next year.
+
+**When the user Input the right combination**
+- The sales for next year combination will be predicted, starting from the year 2020
+
+![user-input](Documentation/user-input.png)
+
+**When the user enters invalid employee details**
+- When the user enters details that is not equal to six, the user will see an error message and a provision to re-enter sales data to predict the next year sales.
+- If the user also enteres an incorrect data, a helpful error messages use color highlights to distinguish between errors and successful input.
+- After a failed validation, the code direct the users on how to correct the input.
+
+![invalid-data](Documentation/invalid-data.png)
+
