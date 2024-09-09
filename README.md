@@ -130,3 +130,28 @@ The user is expected to input the correct six digit numbers, seperated with comm
 - **run.py**
  - No errors were found when passed through the official [Pep8 Python Validator](https://pep8ci.herokuapp.com/). This checking was done manually by copying python code and pasting it into the validator.
  
+![Python Validator](Documentation/python-validator.png)
+
+- Github does not show the last empty line in the file, I added a screenshot of it. The screenshot shows that the code is structured according to PEP8 requirements.
+
+![Python Validator](Documentation/python-validator2.png)
+
+## Deployment
+
+- The program was deployed to [Heroku](https://dashboard.heroku.com).
+
+### To deploy the project to Heroku so it can be run as a remote web application:
+- Clone the repository:
+  1. Open a folder on your computer with the terminal.
+  1. Run the following command
+  - `git clone https://github.com/Ebuka-martins/Pennys-store-statistics-project`
+
+   1. Create your own GitHub repository to host the code.
+  1. Run the command `git remote set-url origin <Your GitHub Repo Path>` to set the remote repository location to your repository.
+
+    1. Push the files to your repository with the following command:
+  `git push`
+  1. Create a Heroku account if you don't already have one here [Heroku](https://dashboard.heroku.com).
+  1. Create a new Heroku application on the following page here [New Heroku App](https://dashboard.heroku.com/apps):
+
+     - ![New Heroku App](documentation/new-app.png)
