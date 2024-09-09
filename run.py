@@ -5,7 +5,6 @@ from colorama import Fore, init
 
 init(autoreset=True)
 
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -16,7 +15,6 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('pennys_store_statistics')
-
 
 def get_sales_data():
     """
@@ -76,7 +74,7 @@ def generate_random_sales(sales_data):
 def predict_sales_for_year(year, data):
     """
     Predict the sales for the specific year, adding a new row with the year
-    and predicted sales data.
+    and predicted sales data. Also prints a description of the predicted sales.
     """
     print(f"Predicting sales for year {year}...\n")
 
@@ -93,6 +91,13 @@ def predict_sales_for_year(year, data):
 
     print(Fore.YELLOW + f"Predicted sales for year {year}: {new_row}")
     print(Fore.YELLOW + "Sales worksheet updated successfully.\n")
+
+    # List of product categories
+    products = ['jeans', 'trousers', 'shoes', 'perfumes', 'polo', 'knickers']
+
+    # Print explanation for each sales number
+    for i, sale in enumerate(predicted_sales):
+        print(Fore.CYAN + f"The sales for {products[i]} is {sale}")
 
 
 if __name__ == "__main__":
