@@ -155,4 +155,8 @@ The user is expected to input the correct six digit numbers, seperated with comm
   1. Create a Heroku account if you don't already have one here [Heroku](https://dashboard.heroku.com).
   1. Create a new Heroku application on the following page here [New Heroku App](https://dashboard.heroku.com/apps):
 
-     - ![New Heroku App](documentation/new-app.png)
+   ![New Heroku App](Documentation/new-app.png)
+
+  1. Go to Setting tab:
+  
+   - ![Setting Tab](documentation/setting.png)
