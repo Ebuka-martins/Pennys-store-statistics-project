@@ -210,14 +210,19 @@ The user is expected to input the correct six digit numbers, seperated with comm
 
    -  Color formatting: [Colorama](https://pypi.org/project/colorama/).
 
-   - Love Sandwish: [Code-Institute](https://codeinstitute.net/global/).
+   - Love Sandwish: [Code-Institute](https://codeinstitute.net/).
 
    - GitHub for hosting the code of the website [GitHub](https://github.com/).
 
    -  Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
 
-
-
+## Acknowledgements
+- I give Special thanks to my wife Precious Chidimma, my brother John Paul and my parents who has been a great support to me all through this project.
+ - [Vernell Clark](https://github.com/VCGithubCode) is my friend and he has been a great support to me throughout this project.
+ - [Jubril Akolade](https://github.com/Jubrillionaire) was a great mentor to me throughout this project.
+ -  [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+ -  [Love Sandwish](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+ - [Ovundiano](https://github.com/Ovundiano) was also my friend who has been very supportive to me throughout this project.
 
  
 
