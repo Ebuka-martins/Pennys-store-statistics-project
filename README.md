@@ -125,7 +125,81 @@ The user is expected to input the correct six digit numbers, seperated with comm
   - None.
 
  ## Testing
+1. ### Overview
 
+This testing report documents the functionality, accuracy, and performance of a Python program developed to predict future sales based on historical data. The predictions are made using a Google Sheets API to update and retrieve data from a Google Spreadsheet titled "pennys_store_statistics."
+
+The program generates randomized predictive sales values for six products—jeans, trousers, shoes, perfumes, polo, and knickers—and appends the results into the spreadsheet while explaining each predicted sales number.
+
+2. ### Environmental setup
+- Programming Language: Python 3.x
+- External Libraries Used:
+ 
+  - `gsprad`  (Google Sheets API integration)
+  - `google.oauth2.service_account.Credentials` (OAuth 2.0 for Google APIs)
+  - `random` (for generating sales predictions)
+  - `colorama` (for colored terminal output)
+- Google Sheets Setup:
+  - The "pennys_store_statistics" spreadsheet must have a worksheet named "sales" with pre-existing historical data and a structure where the first column is the year, and subsequent columns represent sales of six products (jeans, trousers, shoes, perfumes, polo, knickers).
+
+  ### sample historical data:
+
+  | **Year** | **jeans** | **Trousers** | **Shoes** | **Perfumes** | **Polo** | **Knickers**|
+  |----------|-----------|--------------|-----------|--------------|----------|-------------|
+  |  2015   |   24      |      36      |     16    |      31      |     30   |      26     |
+  |  2016   |   22      |      32      |     35    |      29      |     30   |      33     |
+  |  2017   |   34      |      28      |     33    |      19      |     23   |      18     |
+  |  2018   |   27      |      36      |     31    |      24      |     19   |      25     |
+  |  2019   |   29      |      28      |     27    |      26      |     23   |      28     |
+
+
+3. ### Testing Procedure
+ - #### Test Case 1: Validate Data Input
+   Objective: Ensure the program accepts valid sales data in the correct format and rejects invalid data.
+
+   #### Steps:
+   1. Run the program and enter valid sales data(e.g, `24,34,40,52,63,71`)
+   2. Enter invalid data (e.g, `24,34,xyz,52,` or too few/many values.)
+
+   #### Results:
+   - Valid data: The program accepted the input and confirmed the data is valid.
+   - Invalid data: The program provided appropriate error messages and requested valid input.
+
+ - #### Test Case 2: Generate Random Sales Predictive 
+   Objective: Ensure the random sales generation falls within the specified range (±10% variance).
+
+   #### Steps:
+    1. Provide sales data (e.g, `[24,34,40,52,63,71]`).
+    2. The program generates predictive values with random variance for each item.
+
+   #### Result:
+    - Predictive values adhered to the ±10% variance, calculated correctly.
+
+   #### Example:
+    - Input `[24,34,40,52,63,71]`
+    - Predicted output: `[26,32,36,47,68,78]` (values vary between -10% and +10%)   
+
+ - #### Test Case 3: Update Google Sheets
+    Objective: Ensure that each prediction is correctly appended to the Google Sheets "sales" worksheet.
+
+   #### Steps:
+   1. Run the prediction for year 2021.
+   2. Verify that the newly predicted values are appended to the worksheet.
+
+   #### Results:
+   - The program successfully appended the predictions to the Google Sheet.    
+
+ - #### Output Explanation
+   - Ensure the program explains each prediction in a user-friendly manner.
+
+   #### Steps:
+   - Run the program and verify that explanations for each sales number appear as expected.
+
+   #### Results:
+   - The program correctly printed the explanations.
+
+
+  
 ### Validator
 
 - **run.py**
