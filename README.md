@@ -204,7 +204,22 @@ The user is expected to input the correct six digit numbers, seperated with comm
 
      ![Deployment](Documentation/view-button.png) 
 
-     
+ ## Credits
+
+   - Heroku for hosting the application: [heroku.com](https://www.heroku.com/)
+
+   -  Color formatting: [Colorama](https://pypi.org/project/colorama/).
+
+   - Love Sandwish: [Code-Institute](https://codeinstitute.net/global/).
+
+   - GitHub for hosting the code of the website [GitHub](https://github.com/).
+
+   -  Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
+
+
+
+
+ 
 
 
 
