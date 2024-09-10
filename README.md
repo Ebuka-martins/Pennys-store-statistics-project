@@ -155,8 +155,60 @@ The user is expected to input the correct six digit numbers, seperated with comm
   1. Create a Heroku account if you don't already have one here [Heroku](https://dashboard.heroku.com).
   1. Create a new Heroku application on the following page here [New Heroku App](https://dashboard.heroku.com/apps):
 
-   ![New Heroku App](Documentation/new-app.png)
+![New Heroku App](Documentation/new-app.png)
 
   1. Go to Setting tab:
   
-   - ![Setting Tab](documentation/setting.png)
+   ![Setting Tab](Documentation/settings.png)
+
+   
+   - Scroll to Config Var and click Reveal Config Var.
+
+  ![Config Var](Documentation/config-var.png)
+
+   - Type CREDS into the "KEY" area and copy your CREDS file content from your workspace and paste it into the "VALUE" area. Then click "ADD".
+   
+  ![Creds Tab](Documentation/creds.png)
+
+  - Scroll to Buildpacks and click Add buildpacks.
+
+     ![Build pack1](Documentation/buildpacks-1.png)
+
+     - Add heroku and nodejs buildpacks, making sure that python comes first and nodejs underneath.
+
+     ![Build pack2](Documentation/buildpacks-2.png)
+  
+2. Go to the Deploy tab:
+     
+     ![Build pack2](Documentation/dep.png) 
+
+
+     - click GitHub and connect to GitHub. Key in your repository name, click search and then connect.
+
+     ![Deployment](Documentation/deployment-method.png) 
+
+  
+    ![Deployment](Documentation/depo.png) 
+
+    - Scroll to Manual deploy and click Deploy Branch.
+   
+    ![Deployment](Documentation/deploy-branch.png) 
+
+    
+    - Wait for the completion of the deployment.
+
+     ![Deployment](Documentation/deploying-branch.png) 
+
+     
+    - Click "View" to launch the application inside a web page.
+
+     ![Deployment](Documentation/view-button.png) 
+
+     
+
+
+
+
+
+
+
