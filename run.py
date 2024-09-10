@@ -97,7 +97,7 @@ def predict_sales_for_year(year, data):
 
     # Print explanation for each sales number
     for i, sale in enumerate(predicted_sales):
-        print(Fore.CYAN + f"The sales for {products[i]} is {sale}")
+        print(Fore.CYAN + f"The predictive sales for {products[i]} is {sale}")
 
 
 if __name__ == "__main__":
