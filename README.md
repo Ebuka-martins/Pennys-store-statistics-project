@@ -4,6 +4,49 @@ This Python program automates the process of predicting and managing yearly sale
 
   ![Penny's Sales Data Prediction Programming](Documentation/front-page.png)
 
+  ## Table of Contents
+- [Introduction](#introduction)
+- [Penny's Sales Data Prediction Programming](#Penny's-Sales-Data-Prediction-Programming)
+- [Users experience](#Users-experience)
+- [Features](#Features)
+  - [When the program is loaded](#When-the-program-is-loaded)
+
+  - [When the user Input the right combination](When-the-user-Input-the-right-combination)
+
+  - [When the user enters invalid sales data for prediction](When-the-user-enters-invalid-sales-data-for-prediction)
+
+  - [When the user enters letters in place of data numbers or data number that are less than six](When-the-user-enters-letters-in-place-of-data-numbers-or-data-number-that-are-less-than-six)
+
+  - [When the user enters data numbers that are greater than the valid six digit numbers](When-the-user-enters-data-numbers-that-are-greater-than-the-valid-six-digit-numbers)
+
+  - [When the user enters a valid data numbers](#When-the-user-enters-a-valid-data-numbers)
+
+- [Technologies Used](#Technologies-Used)  
+
+  - [Language](#Language)
+  - [Frameworks/Libraries and Tools](#Frameworks-Libraries-and-Tools)
+  - [Other-tools](#Other-tools)
+
+- [Bugs](#Bugs)
+  - [Solved bugs](#Solved-bugs)
+  - [Unsolved Bugs](#Unsolved-Bugs) 
+
+- [Testing](#Testing)  
+  - [Overview](#Overview)
+  - [Environmental setup](#Environmental-setup)
+  - [Testing-Procedure](#Testing-Procedure)
+  - [Summary](#Summary)
+
+- [Validator](#Validator)
+
+- [Deployment](#Deployment)
+
+- [Credits](#Credits)
+
+- [Acknowledgements](#Acknowledgements)
+
+
+
   ## How to access Penny's Sales Data Prediction Programming:
 - Enter the [link](https://sales-prediction-f352ba78f145.herokuapp.com/) alternatively you can also copy the link: `https://sales-prediction-f352ba78f145.herokuapp.com/` and paste it in the browser.
 - Wait for the page to load and then you click 'RUN PROGRAM'.
