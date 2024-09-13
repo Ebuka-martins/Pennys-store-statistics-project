@@ -240,7 +240,24 @@ The program generates randomized predictive sales values for six products—jean
 
    #### Results:
    - The program correctly printed the explanations.
+   
 
+Here is also a tabular representation of the **Features**, **Action**, **Expected Results**, and **Actual Result**.
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Data Input Validation | Enter valid sales data (`e.g., 24,34,40,52,63,71`) | The program accepts the inputand confirms the data is valid | The program accepted the valid input and confirmed `it is valid` |
+| Data Input Validation (Invalid) | Enter invalid sales data (`e.g., 24,34,xyz,52` or too few/many values) | The program rejects the invalid input and requests the user to re-enter the data, displaying a relevant error message | The program provided appropriate error messages and prompted for valid input | 
+| Random Sales Generation | Run the program with valid input (`e.g., 24,34,40,52,63,71`)  | The program generates predictive sales values with random variance (±10% of the original values). | The program successfully generated predictive sales values within the specified variance. |
+| Google Sheets Update | Predict sales for a year (e.g., 2020) and check Google Sheets | The program appends the predicted sales data for the year to the Google Sheets worksheet in the correct format. | The program successfully appended the prediction for the year to the Google Sheets worksheet. |
+| Yearly Increment | User inputs symbol or number | Error message appears | Works as expected |
+| Name input | Run the program in a loop (with valid data) | The program increments the year with each iteration (e.g., from 2020 to 2021, 2022, etc.) and correctly predicts sales for the incremented year | The program successfully increments the year and generates the predicted values for the next year. |
+| Sales Explanation | Run the program with valid input (`e.g., 24,34,40,52,63,71`) | The program prints an explanation of the sales prediction for each product (e.g., "The sales for jeans is 26") | The program correctly displayed explanations for each sales prediction. |
+| User Control (Continue/Exit) | After each prediction, choose to continue (`yes`) or exit (`no`) | The program either proceeds to the next year prediction if the user enters `yes` or exits if the users enters `no`. | The program correctly continued or exited based on the user input. |
+| Error Handling for Network/Sheet Issues | Disconnect network or use an invalid Google API credentials file | The program displays an error message indicating it could not connect to the Google Sheets API or could not access the Google Sheets file. | The program raised an appropriate error when the network or credentials were invalid. |
+ | Colored Output (via colorama) | Run the program and observe terminal output | The terminal output is color-coded to enhance user experience (e.g., sales explanations in cyan, warnings/errors in red, predictions in yellow). | The terminal output displayed colored text as expected using the `colorama` package. |  
+| Sales Variance Control | Observe the variance in predicted sales values | The program adds or subtracts up to 10% of the original value to generate predicted sales data. | Variance applied as expected; predicted sales varied by ±10% from the original values. |
+| Handling Empty or Malformed Spreadsheet | Run the program on a malformed Google Sheet (e.g., missing columns) | The program either appends data correctly if the structure matches, or raises an error if the worksheet does not meet the expected structure (year, jeans, trousers, etc.). | The program encountered errors if the Google Sheet was not correctly structured. Proper structure is required.
+ |    
 4. ### Summary
   - All features were tested successfully, and the program behaved as expected in most cases.
   - Error handling worked correctly when invalid data or network issues occurred, though improvements could be made for handling incorrect Google Sheet structures.
