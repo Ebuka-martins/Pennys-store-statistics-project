@@ -1,6 +1,6 @@
 # PENNY'S SALES DATA PREDICTION PROGRAMMING
-This Python program automates the process of predicting and managing yearly sales data for Penny's store. By integrating with Google Sheets, the program allows the user to input sales data for six different product categories and predict future sales based on a small random variance. The historical sales data for products like Jeans, Trousers, Shoes, Perfumes, Polo, and Knickers is tracked in a Google Sheets worksheet. The program updates this worksheet by adding new sales predictions, which are generated using historical data and random variations.
- Here is the link to Love Sandwish-heroku where employee details are entered [link](https://sales-prediction-f352ba78f145.herokuapp.com/)
+This Python program automates the process of predicting and managing yearly sales data for Penny's store. By integrating with Google Sheets, the program allows the user to input sales data for six different product categories and predict future sales based on a small random variance. The historical sales data for products like jeans, trousers, shoes, perfumes, polo, and knickers is tracked in a Google Sheets worksheet. The program updates this worksheet by adding new sales predictions, which are generated using historical data and random variations.
+ Here is the link to Love Sandwiches-heroku where employee details are entered [link](https://sales-prediction-f352ba78f145.herokuapp.com/)
 
   ![Penny's Sales Data Prediction Programming](Documentation/front-page.png)
 
@@ -17,9 +17,9 @@ This Python program automates the process of predicting and managing yearly sale
 
   - [When the user enters letters in place of data numbers or data number that are less than six](When-the-user-enters-letters-in-place-of-data-numbers-or-data-number-that-are-less-than-six)
 
-  - [When the user enters data numbers that are greater than the valid six digit numbers](When-the-user-enters-data-numbers-that-are-greater-than-the-valid-six-digit-numbers)
+  - [When the user enters more data than the valid six numbers](When-the-user-enters-more-data-than-the-valid-six-numbers)
 
-  - [When the user enters a valid data numbers](#When-the-user-enters-a-valid-data-numbers)
+  - [When the user enters valid data numbers](#When-the-user-enters-valid-data-numbers)
 
 - [Technologies Used](#Technologies-Used)  
 
@@ -51,21 +51,21 @@ This Python program automates the process of predicting and managing yearly sale
 - Enter the [link](https://sales-prediction-f352ba78f145.herokuapp.com/) alternatively you can also copy the link: `https://sales-prediction-f352ba78f145.herokuapp.com/` and paste it in the browser.
 - Wait for the page to load and then you click 'RUN PROGRAM'.
 - Choose from the options displayed.
-1. Enter your sales Data
-2. Automatically, the google sales worksheet for next year will be updated effectively statrting from the year 2020.
+1. Enter your sales data
+2. Automatically, the google sales worksheet for next year will be updated effectively starting from the year 2020.
 3. The program will ask you if you want to predict the sales for next year.
 4. Press YES to continue with the sales prediction for next year.
 5. press No to Exit the program.
 
 
-## Users experience
+## User experience
 
 #### To provide the perfect user experience and features for Penny's store statistics app, we need to focus on key elements like simplicity, user guidance, predictive insights, and visualization. Here's an enhanced version of your current app's user experience (UX) and feature set:
-- As a user, a welcoming Introduction: When the app starts, give the user a clear overview of what they can do with the app (e.g., predict sales, view past statistics).
+- As a user, I would like to see a welcoming Introduction: When the app starts, it gives the user a clear overview of what they can do with the app (e.g., predict sales, view past statistics).
 - Data Input Help: If the user enters incorrect data, provide specific, helpful error messages. Use color highlights to distinguish between errors and successful inputs (e.g., invalid input in red, successful in green).
 - Error Handling for Incorrect Inputs: After a failed validation, guide the user on how to correct the input.
 - Immediate Validation: After input, validate the data immediately and highlight success in green, errors in red.
-- an error occures if not enough values or if non-numeric values are provided.
+- an error occurs if not enough values or if non-numeric values are provided.
 - How to exit the program once the valid details has been entered.
 
 
@@ -76,17 +76,17 @@ This Python program automates the process of predicting and managing yearly sale
 - The user will be ushered in with a welcoming message.
 - A statement which says you should enter the sales data to precict the next year sales is also displayed.
 - An example of the kind and amount of data you should input is displayed 
-- if the right combination is inputed a predictive data is generated for 2020, using random variance.
+- If the right combination is inputted a predictive data is generated for 2020, using random variance.
 - The data arrays generated will be automatically explained what each data means.
 - The data is automatically updated on the google sheet
 - The program will ask the users if they still want to predict sales for next year.
-- if the user says YES, it automatically predict the next year input and if the user input a NO statement, it exit the program.
+- If the user says YES, it automatically predict the next year input and if the user input a NO statement, it exit the program.
 
 ![welcome-message](Documentation/welcome-message.png)
 
-The user is expected to input the correct six digit numbers, seperated with commas in other to predict the sales for next year.
+The user is expected to input the correct six digit numbers, separated with commas in other to predict the sales for next year.
 
-**When the user Input the right combination**
+**When the user input the right combination**
 - The sales for next year combination will be predicted, starting from the year 2020
 
 ![user-input](Documentation/user-input.png)
@@ -94,29 +94,29 @@ The user is expected to input the correct six digit numbers, seperated with comm
 **When the user enters invalid sales data for prediction**
 - When the user enters details that is not equal to six, the user will see an error message and a provision to re-enter sales data to predict the next year sales.
 - If the user also enteres an incorrect data, a helpful error messages use color highlights to distinguish between errors and successful input.
-- After a failed validation, the code direct the users on how to correct the input.
+- After a failed validation, the code directs the user on how to correct the input.
 
 ![invalid-data](Documentation/invalid-data.png)
 
 
 **When the user enters letters in place of data numbers or data number that are less than six**
 
-- When the user enter letters in place of whole numbers for sales prediction, the user will see an error message and a provision to re-enter sales details for next year prediction.
-- When the user enter a data less than the valid six digit, an error warning message will tell the user that they provided number less than six.
+- When the user enters letters in place of whole numbers for sales predictions, the user will see an error message and a provision to re-enter sales details for next year's prediction.
+- When the user enters data less than the valid six values, an error warning message will tell the user that they provided less than six values.
 
 ![invalid-letters](Documentation/invalid-letter.png)
 
-**When the user enters data numbers that are greater than the valid six digit numbers**
+**When the user enters more data than the valid six numbers**
 - When the users enters a number greater than the required valid six data number, an error message will tell you that you have provided a higher amount of number.
 - It will also tell the user that exactly six numbers are required to predict the next year sales.
 - I t also tells the user to re-enter the right amount of combination in other to predict the next year sales
 
 ![higher-input](Documentation/highr-input.png)
 
-**When the user enters a valid data numbers**
+**When the user enters valid data numbers**
 - When the user enters the valid combination, the predictive sales for the next year will be generated automatically.
 - Immediately after the data has been generated, the program will ask you if you want to predict sales for next year.
-- when the user enters `Yes`, a random number sales for next upper year will be generated, but if type `NO`you will be automatically exiting the program.
+- When the user enters `Yes`, random number sales for next upper year will be generated, but if type `NO` you will be automatically exiting the program.
 
 ![valid-data](Documentation/valid-data.png)
 
@@ -144,7 +144,7 @@ The user is expected to input the correct six digit numbers, seperated with comm
 
 ## Bugs
 ### Solved bugs
-1. The color font text used to color print output was solved by applying `Fore and import colorama`
+1. The color font text bug used to color print output was solved by applying `Fore and import colorama`
 ```
  
     print(Fore.YELLOW + f"Predicted sales for year {year}: {new_row}")
@@ -348,18 +348,18 @@ Here is also a tabular representation of the **Features**, **Action**, **Expecte
 
    -  Color formatting: [Colorama](https://pypi.org/project/colorama/).
 
-   - Love Sandwish: [Code-Institute](https://codeinstitute.net/).
+   - Love Sandwiches: [Code-Institute](https://codeinstitute.net/).
 
    - GitHub for hosting the code of the website [GitHub](https://github.com/).
 
    -  Terminal menu: [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/).
 
 ## Acknowledgements
-- I give Special thanks to my wife Precious Chidimma, my brother John Paul and my parents who has been a great support to me all through this project.
+- I give Special thanks to my wife Precious Chidimma, my brother John Paul and my parents who have been a great support to me all through this project.
  - [Vernell Clark](https://github.com/VCGithubCode) is my friend and he has been a great support to me throughout this project.
  - [Jubril Akolade](https://github.com/Jubrillionaire) was a great mentor to me throughout this project.
  -  [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
- -  [Love Sandwish](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+ -  [Love Sandwiches](https://codeinstitute.net/) tutorial.
  - [Ovundiano](https://github.com/Ovundiano) was also my friend who has been very supportive to me throughout this project.
 
  
