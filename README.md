@@ -258,7 +258,7 @@ Here is also a tabular representation of the **Features**, **Action**, **Expecte
 | Sales Variance Control | Observe the variance in predicted sales values | The program adds or subtracts up to 10% of the original value to generate predicted sales data. | Variance applied as expected; predicted sales varied by ±10% from the original values. |
 | Handling Empty or Malformed Spreadsheet | Run the program on a malformed Google Sheet (e.g., missing columns) | The program either appends data correctly if the structure matches, or raises an error if the worksheet does not meet the expected structure (year, jeans, trousers, etc.). | The program encountered errors if the Google Sheet was not correctly structured. Proper structure is required.
  |    
-4.  ### Summary
+4. ### Summary
   - All features were tested successfully, and the program behaved as expected in most cases.
   - Error handling worked correctly when invalid data or network issues occurred, though improvements could be made for handling incorrect Google Sheet structures.
   - The program's integration with Google Sheets worked seamlessly, with sales predictions updating the correct worksheet in real-time.
