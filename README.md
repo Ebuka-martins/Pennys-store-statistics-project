@@ -169,7 +169,7 @@ The user is expected to input the correct six digit numbers, separated with comm
             break
 ```
 2. The method ```  print(Fore.RED + "Exiting program.")
-            break``` was not properly exiting from the program when run on pthon terminal.
+            break``` was not properly exiting from the program when run on python terminal.
 
       ```  print(Fore.RED + "Exiting program.")
             break
