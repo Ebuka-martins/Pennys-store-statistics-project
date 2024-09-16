@@ -18,7 +18,8 @@ SHEET = GSPREAD_CLIENT.open('pennys_store_statistics')
 
 def get_sales_data():
     """
-    Collect sales data input from the user to get the base sales for the next year prediction.
+    Collect sales data input from the user 
+    to get the base sales for the next year prediction.
     """
     while True:
         print("Welcome to Penny's Sales Data Prediction Programming")
