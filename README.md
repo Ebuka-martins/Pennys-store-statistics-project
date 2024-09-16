@@ -22,6 +22,9 @@ This Python program automates the process of predicting and managing yearly sale
 
   - [When the user enters valid data numbers](#When-the-user-enters-valid-data-numbers)
 
+- [Google Sheets](#Google-Sheets)  
+  - [Sales](#Sales) 
+ 
 - [Technologies Used](#Technologies-Used)  
 
   - [Language](#Language)
@@ -132,6 +135,16 @@ The user is expected to input the correct six digit numbers, separated with comm
 - When the user enters `Yes`, random number sales for next upper year will be generated, but if type `NO` you will be automatically exiting the program.
 
 ![valid-data](Documentation/valid-data.png)
+
+## Google Sheets
+ Using Google sheets wasn't part of the original project spec and was added after all the code was created, tested and working. The sheet contains one section.
+
+ ### Sales
+
+ This section contains the overall yearly sales for jeans,trousers, shoes,perfumes,polo and knickers.
+
+ ![Google Sheet](Documentation/google-sheet.png)
+ 
 
 ## Technologies Used
 ### Language:
