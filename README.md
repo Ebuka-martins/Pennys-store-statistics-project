@@ -7,6 +7,7 @@ This Python program automates the process of predicting and managing yearly sale
   ## Table of Contents
 - [Introduction](#introduction)
 - [Penny's Sales Data Prediction Programming](#Penny's-Sales-Data-Prediction-Programming)
+- [Pre development](#Pre-development)
 - [Users experience](#Users-experience)
 - [Features](#Features)
   - [When the program is loaded](#When-the-program-is-loaded)
@@ -46,6 +47,18 @@ This Python program automates the process of predicting and managing yearly sale
 - [Acknowledgements](#Acknowledgements)
 
 
+## Pre development
+The flowchart will represent the overall structure of the code and its main functions. Here's a summary of the flow:
+
+**I wrote out the notes and created a flow chart for this project.**
+
+![Flow Chart](Documentation/flowchart.webp)
+
+My actual notes that created the flow chart
+
+![Flow Chart](Documentation/flow1.jpeg)
+
+![Flow Chart](Documentation/flow2.jpeg)
 
   ## How to access Penny's Sales Data Prediction Programming:
 - Enter the [link](https://sales-prediction-f352ba78f145.herokuapp.com/) alternatively you can also copy the link: `https://sales-prediction-f352ba78f145.herokuapp.com/` and paste it in the browser.
