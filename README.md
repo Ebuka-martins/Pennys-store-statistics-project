@@ -43,7 +43,7 @@ This Python program automates the process of predicting and managing yearly sale
 
 - [Validator](#Validator)
 
-- [Deployment](#Deployment)
+- [Local Development and Deployment](#Local-Development-and-Deployment)
 
 - [Credits](#Credits)
 
@@ -208,9 +208,26 @@ The portal has been well tested and the results can be viewed [here - TESTING](T
 
 ![Python Validator](Documentation/python-validator2.png)
 
-## Deployment
+## Local Development and Deployment
 
 - The program was deployed to [Heroku](https://dashboard.heroku.com).
+
+### Local Development
+
+#### How to Fork
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [Pennys-store-statistics-project](https://github.com/Ebuka-martins/Pennys-store-statistics-project)
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, [Pennys-store-statistics-project](https://github.com/Ebuka-martins/Pennys-store-statistics-project)
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ### To deploy the project to Heroku so it can be run as a remote web application:
 - Clone the repository:
